@@ -1,0 +1,101 @@
+@import './util.scss';
+
+@font-face {
+  font-family: 'iconfont';  /* project id 390348 */
+  src: url('//at.alicdn.com/t/font_390348_3h0aujs6dt5ipb9.eot');
+  src: url('//at.alicdn.com/t/font_390348_3h0aujs6dt5ipb9.eot?#iefix') format('embedded-opentype'),
+  url('//at.alicdn.com/t/font_390348_3h0aujs6dt5ipb9.woff') format('woff'),
+  url('//at.alicdn.com/t/font_390348_3h0aujs6dt5ipb9.ttf') format('truetype'),
+  url('//at.alicdn.com/t/font_390348_3h0aujs6dt5ipb9.svg#iconfont') format('svg');
+}
+::-webkit-scrollbar{width:1px}
+html,body,#app{
+    width:100%;
+    height:100%;
+}
+button,input{
+    outline : none;
+}
+.container{
+    max-width:640px;
+    margin:0 auto;
+    height:100%;
+    display: flex;
+    flex-direction: column;
+    a{
+        color:#666;
+    }
+    b{
+        font-family: 'iconfont'; 
+    }
+    #header{
+        @include flex;
+        @include flex-center;
+        width:100%;
+        height:50px;
+        background: #fff;
+        z-index:999;
+        #login{  
+            @include flexBox;
+            @include flex(2);
+            @include flex-center;
+            img{
+                width:20px;
+                height:20px;
+            }
+        }
+        #jiaserchBox{
+            color:darkgray;
+            background: lightgray;
+            padding:5px;
+            @include flexBox;
+            @include flex(9);
+        }
+        .Buycart{
+            @include flex(2);
+            text-align: center;
+            font-size:16px;
+        }
+    }
+    .bu{
+        height:50px;
+    }
+    #content{
+        flex:1;
+        overflow-y: auto;
+    }
+    #footer{
+        background: #fff;
+        width:100%;
+        border-top:1px solid #666;
+        #footerUl{
+            margin-top:5px;
+            @include flexBox;
+            @include flex-center;
+            width:100%;
+            .footerlist{
+                @include flex(1);
+                a{
+                    display: flex;
+                    @include flex-direction(colunm);
+                    @include flex-center;
+                    width:100%;
+                    height:100%;
+                    color:#666;
+                    img{
+                        width:20px;
+                        height:20px;
+                    }
+                }
+                p{
+                    font-size:12px;
+                    margin-top:3px;
+                    text-align: center;
+                }
+                .active{
+                    color:#f66;
+                }     
+            }
+        }
+    }
+}
