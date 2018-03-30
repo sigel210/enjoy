@@ -32,7 +32,10 @@
   "name": "webpack",
   "version": "1.0.0",
   "main": "app.js",
-  "devDependencies": {},
+  "devDependencies": {
+    "babel-plugin-external-helpers": "^6.22.0",
+    "babel-preset-env": "^1.6.1"
+  },
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
     "dev": "webpack-dev-server"
